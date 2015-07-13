@@ -29,11 +29,12 @@ CKEDITOR.dialog.add( 'placeholder', function( editor ) {
 					// Dialog window UI elements.
 					{
 						id: 'name',
-						type: 'text',
+						type: 'select',
 						style: 'width: 100%;',
 						label: lang.name,
 						'default': '',
 						required: true,
+						items: [['LOGO/SITE NAME'], ['STORE-URL'], ['STORE-NAME'], ['USER-ID'], ['PASSWORD'], ['CATEGORIES'], ['STORE-PHONE-NUMBER'], ['STORE-EMAIL-ID']],
 						validate: CKEDITOR.dialog.validate.regex( validNameRegex, lang.invalidName ),
 						setup: function( widget ) {
 							this.setValue( widget.data.name );
